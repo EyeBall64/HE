@@ -38,7 +38,7 @@ public class LinkedList {
         head = n;
     }
 
-    public void add(int index, int v) {
+    public void Add(int index, int v) {
         Node n = new Node(v);
         Node current = head;
         Node previous = null;
@@ -54,11 +54,11 @@ public class LinkedList {
         head = null;
     }
 
-    public int getFirst() {
+    public int GetFirst() {
         return head.value;
     }
 
-    public int getLast() {
+    public int GetLast() {
         Node current = head;
         Node previous = null;
         while (current != head) {
@@ -68,7 +68,7 @@ public class LinkedList {
         return current.value;
     }
 
-    public int get(int index){
+    public int Get(int index){
         Node current = head;
         Node previous = null;
         for (int i = 0; i < index; i++) {
@@ -76,5 +76,22 @@ public class LinkedList {
             current = current.GetNext();
         }
         return current.value;
+    }
+
+    public void Set(int index, int n){
+
+    }
+
+    public boolean Contains(int n){
+        Node current = head;
+        Node previous = null;
+        for(int i = 0;i+1<n;i++){
+            previous = current;
+            current = current.GetNext();
+            if (previous.value == n){
+                return true;
+            }
+        }
+        return false;
     }
 }
