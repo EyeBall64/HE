@@ -19,5 +19,8 @@ public class Node {
     public void Display(){
         System.out.println(value);
     }
-}
 
+    public int GetValue(){
+        return value;
+    }
+}

@@ -1,5 +1,6 @@
 public class LinkedList {
     public Node head;
+    public Node cursor;
 
     public LinkedList() {
         head = null;
@@ -13,6 +14,16 @@ public class LinkedList {
             n.SetNext(adding);
             n = n.GetNext();
         }
+    }
+
+    public int GetNext(){
+        int v = cursor.value;
+        cursor = cursor.GetNext();
+        return v;
+    }
+
+    public boolean HasNext(){
+        return(cursor != null);
     }
 
     public void AddItem(int v) {
@@ -93,5 +104,16 @@ public class LinkedList {
             }
         }
         return false;
+    }
+
+    public int GetSize(){
+        int count = 0;
+        Node current = head;
+
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 }
