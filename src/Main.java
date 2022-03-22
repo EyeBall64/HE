@@ -23,6 +23,10 @@ public class Main {
         //myList.AddItem(6);
         //myList.AddItem(67);
 
+        for(int i=0;i<10;i++){
+
+        }
+
     }
 }
 

@@ -1,4 +1,4 @@
-public class ArrayStack {
+public class ArrayStack extends Stack{
 
     private int maxSize;
     private int[] element;
@@ -38,14 +38,14 @@ public class ArrayStack {
     }
 
     public boolean IsEmpty(){
-        
+        return (head == null);
     }
 
     public boolean IsFull(){
-
+        return super.IsFull();
     }
 
     public int Size(){
-
+        return super.Size();
     }
 }

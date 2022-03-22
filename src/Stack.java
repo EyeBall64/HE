@@ -29,7 +29,7 @@ public class Stack extends LinkedList{
         return (head != null);
     }
 
-    public void Size(){
-        super.GetSize();
+    public int Size(){
+        return super.GetSize();
     }
 }
